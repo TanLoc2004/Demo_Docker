@@ -1,0 +1,16 @@
+name: Kịch bản thử nghiệm
+
+on: 
+  push: 
+    branches: ["main"]
+jobs:
+  thuc_hanh_doc_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bước 1 - XIn chào
+        run: echo "Hello World"
+      - name: Bước 2 - Tải code
+        uses: actions/checkout@v6.0.2
+      - name: Bước 3 - Đọc file 
+        run: cat README.md
